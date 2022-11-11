@@ -1,0 +1,68 @@
+.card-det{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card{
+    margin:20px;
+    text-align: center;
+    box-shadow: 3px 3px 10px 10px #eee;
+    padding: 10px;
+    min-height:415px ;
+}
+.card img{
+    min-width: 225px;
+    max-height: 225px;
+    object-fit: contain;
+}
+.img h2{
+    font-weight: 800;
+}
+.c-cont span{
+    font-size: 19px;
+    padding: 10px;
+   
+
+}
+.btn-cont {
+    margin-top: 10px;
+
+}
+.btn-cont button{
+    color:black;
+min-width: 30px;
+font-size: 20px;
+border-radius: 30%;
+border: none;
+box-shadow: 0.5px 0.5px 4px -1px;
+margin-bottom: 10px;
+padding: 3px;
+}
+.btn-cont span{
+    padding: 10px;
+}
+.crt button{
+    color: blue;
+    border-radius: 10%;
+border: none;
+box-shadow: 0.5px 0.5px 4px -1px ;
+padding: 5px;
+}
+
+.spn-1{
+    display: flex;
+    margin-left: 75px;
+}
+.fa{
+    position: absolute;
+    font-size: 25px;
+}
+.crt i{
+    color: blue;
+    margin-left: 5px;
+}
+.btn-cont button:hover{
+    cursor: pointer;
+    color:blue;
+}

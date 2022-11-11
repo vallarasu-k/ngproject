@@ -1,0 +1,49 @@
+<div class="card-det" id="back">
+    <div *ngFor="let card of carddetails">
+      <div class="card">
+        <div class="img">
+          <img src="{{ card.imgUrl }}" alt="img" />
+          <h2>{{ card.heading }}</h2>
+        </div>
+  
+        <div class="c-cont">
+          <span>{{ card.quantity }}kg</span> <span>rs.{{ card.price }}</span>
+        </div>
+  
+        <div class="btn-cont">
+          <div class="spn-1">
+            <div class="spn-btn-1">
+              <button (click)="fnIncrement(card)">+</button>
+            </div>
+  
+            <div class="spn-sn-1">
+              <span>kg{{ card.quantity * card.order_quantity }}</span>
+            </div>
+          </div>
+  
+          <div class="btn-cont">
+            <div class="spn-1">
+              <div class="spn-btn-1">
+                <button (click)="fnDecrement(card)">-</button>
+              </div>
+  
+              <div class="spn-sn-1">
+                <span>rs.{{ card.price * card.order_quantity }} </span>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="crt">
+          <button (click)="fncart()">add to cart</button>
+          <i class="fa fa-cart-arrow-down"></i>
+        </div>
+      </div>
+    </div>
+  
+    <app-popup [cardvalues]="carddetails"></app-popup>
+  </div>
+  
+  
+  
+  

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="cont">
+      <button (click)="openpopup()"></button>
+    </div>
+    <div *ngIf="status" class="popup">
+      <div class="pop-cont" *ngIf="showme">
+        <table class="pop">
+          <tbody style="position: relative">
+            <button style="position: absolute" (click)="openpopup()"  class="cls">
+              x
+            </button>
+            <tr>
+              <th>name</th>
+              <th style="padding-left:18px ;">price</th>
+              <th>ordered price</th>
+              <th>quantity</th>
+              <th>order quantity</th>
+            </tr>
+            <div *ngFor="let card of cardvalues" class="data-pop">
+              <tr *ngIf="card.order_quantity" class="td">
+                <td>{{ card.heading }}</td>
+                <td >{{ card.price }}</td>
+                <td style="padding-left:20px ;">{{ card.price * card.order_quantity }}</td>
+                <td style="padding-left:40px ;">{{ card.quantity }}</td>
+                <td style="padding-left:40px ;">{{ card.quantity * card.order_quantity }}</td>
+              </tr>
+            </div>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
